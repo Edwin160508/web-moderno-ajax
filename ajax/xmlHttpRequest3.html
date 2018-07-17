@@ -38,7 +38,7 @@
             metodo:"GET",
             url:"/dados/estados.xml",
             sucesso(resposta){
-                const estados = resposta.getElementsByName('estados');
+                const estados = resposta.getElementsByTagName('estados');
                 const itens = Array.from(estados).reduce(
                     (html, estado) => html + `<li>${estado.attributes.nome.value}</li>`,''
                 );
